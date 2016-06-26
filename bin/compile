@@ -36,7 +36,7 @@ end
 ##
 # Tell `curl` on the BUILD machine (not in slug) to use ~/.netrc
 File.open "#{ENV['HOME']}/.curlrc", "w+", 0600 do |f|
-  f.puts "--netrc-optional"
+  f.puts "--netrc"
 end
 
 if valid_login? github_token
